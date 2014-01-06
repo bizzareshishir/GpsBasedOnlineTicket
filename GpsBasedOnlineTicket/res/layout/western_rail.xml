@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+	<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:gravity="center"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:text="Western Railway Information"/>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+			
+			<TextView  
+			    android:layout_width="150dp" 
+			    android:layout_height="wrap_content" 
+			    android:gravity="left"
+			    
+			    android:textStyle="bold"
+			    android:text="Source Station:"/>
+			<Spinner 
+				android:id="@+id/wbtn_central" 
+				android:layout_width="150dp" 
+				android:layout_height="wrap_content"
+				android:entries="@array/western_rail"
+				android:prompt="@string/select_western_rail">
+			</Spinner>
+		
+	</LinearLayout>
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+			<TextView  
+			    android:layout_width="150dp" 
+			    android:layout_height="wrap_content" 
+			    android:gravity="left"
+			    android:textStyle="bold"
+			    android:text="Destination:"/>
+			<Spinner 
+				android:id="@+id/wsp_central" 
+				android:layout_width="150dp" 
+				android:layout_height="wrap_content"
+				android:entries="@array/western_rail"
+				android:prompt="@string/select_western_rail">
+			</Spinner>
+			
+	</LinearLayout>	
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+			<RadioGroup 
+				android:id="@+id/wbtn_rg" 
+				android:layout_width="100dp" 
+				android:layout_height="wrap_content">
+				<RadioButton 
+					android:text="Single" 
+					android:id="@+id/wrbtn_single" 
+					android:layout_width="150dp" 
+					android:layout_height="wrap_content">
+				</RadioButton>
+				<RadioButton 
+					android:text="Return" 
+					android:id="@+id/wrbtn_return" 
+					android:layout_width="150dp" 
+					android:layout_height="wrap_content">
+				</RadioButton>
+			</RadioGroup>
+	</LinearLayout>
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+			<Button 
+				android:text="Proceed"
+				android:id="@+id/wbtn_proceed" 
+				android:layout_width="150dp" 
+				android:layout_height="wrap_content">
+			</Button>
+			<Button 
+				android:text="Clear" 
+				android:id="@+id/wbtn_clear_easy" 
+				android:layout_width="150dp" 
+				android:layout_height="wrap_content">
+			</Button>
+	</LinearLayout>
+</LinearLayout>
