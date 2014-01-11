@@ -22,22 +22,33 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.college.gpsbasedonlineticket.Home"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.college.gpsbasedonlineticket.CentralRail" >
+        <activity
+            android:name="com.college.gpsbasedonlineticket.CentralRail"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.college.gpsbasedonlineticket.WesternRail" >
+        <activity
+            android:name="com.college.gpsbasedonlineticket.WesternRail"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.college.gpsbasedonlineticket.HarbourRail" >
+        <activity
+            android:name="com.college.gpsbasedonlineticket.HarbourRail"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.college.gpsbasedonlineticket.ThaneVashiRail" >
+        <activity
+            android:name="com.college.gpsbasedonlineticket.ThaneVashiRail"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.college.gpsbasedonlineticket.RegistrationForm" >
+        <activity
+            android:name="com.college.gpsbasedonlineticket.RegistrationForm"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.college.gpsbasedonlineticket.TicketScreen"

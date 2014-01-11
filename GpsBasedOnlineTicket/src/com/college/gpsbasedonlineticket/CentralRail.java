@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.bg.task.FareCalculator;
 import com.bg.task.UiHandler;
@@ -28,6 +29,8 @@ public class CentralRail extends Activity
 	RadioButton rbButton_single,rbtnButton_return;
 	
 	Button btn_submit_ticket;
+	TextView txt_submit_ticket;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -59,6 +62,8 @@ public class CentralRail extends Activity
 	
 	public void init()
 	{
+		//distance between source and station should be 500 meters
+		
 		sp_source = (Spinner) findViewById(R.id.sp_central_from);
 		sp_dest = (Spinner) findViewById(R.id.sp_central_to);
 		rgGroup = (RadioGroup) findViewById(R.id.btn_rg);
@@ -71,6 +76,7 @@ public class CentralRail extends Activity
 		uihandler.setApplicationContext(context);
 		
 		btn_submit_ticket=(Button)findViewById(R.id.btn_submit_ticket);
+		txt_submit_ticket=(TextView)findViewById(R.id.txt_submit_ticket);
 	}
 	
 	
@@ -98,6 +104,7 @@ public class CentralRail extends Activity
 					
 					Place  placeDetails = (Place) msg.obj;
 					if(placeDetails!=null){
+						txt_submit_ticket.setText(placeDetails.toString());
 						Log.e("newlog", placeDetails.toString());
 					}
 				}

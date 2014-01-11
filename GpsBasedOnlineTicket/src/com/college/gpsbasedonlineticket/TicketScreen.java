@@ -16,7 +16,7 @@ import com.commonsware.cwac.tracker.service.network.LocationPollerNetwork;
 public class TicketScreen extends Activity{
 	
 	
-	public static final int PERIOD = 60000; // 1 minute
+	public static final int PERIOD = 30*1000; // 1 minute
 	
 	private PendingIntent piNtw = null;
 	private AlarmManager mgrNtw = null;
@@ -37,7 +37,7 @@ public class TicketScreen extends Activity{
 		Log.e("newlog", "initiate");
 		mgrNtw = (AlarmManager) getSystemService(ALARM_SERVICE);
 		piNtw = PendingIntent.getBroadcast(this, 0,
-				getIntentNetwork(LocationManager.GPS_PROVIDER), 0);
+				getIntentNetwork(LocationManager.NETWORK_PROVIDER), 0);
 		mgrNtw.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
 				SystemClock.elapsedRealtime(), PERIOD, piNtw);
 		

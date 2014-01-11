@@ -101,6 +101,13 @@
         </Button>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/txt_submit_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+    </TextView>
+
     <Button
         android:id="@+id/btn_submit_ticket"
         android:layout_width="150dp"
